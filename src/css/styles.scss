@@ -60,13 +60,27 @@ a {
     }
 }
 
-.header-menu {
-    display: flex;
-    flex-direction: row;
-    &__item {
-        display: inline-block;
-        margin: 0 15px;
-        font-size: .9rem;
+.story {
+    &-wrap {
+        background-color: #fff;
+        padding: 24px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-around;
+        flex-direction: column;
+    }
+    &__title {
+        font-size: 2rem;
+        color: #000;
+        flex-grow: 1;
+        margin: 12px 24px;
+        text-align: center;
+    }
+    &__text {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        flex: 1 1;
     }
 }
 
@@ -227,6 +241,12 @@ a {
 }
 
 @media (min-width: 1000px) {
+    .story-wrap {
+        flex-direction: row;
+    }
+    .story__text {
+        flex: 1 1 calc(1.2rem * 30);
+    }
     .contacts__list {
         justify-content: flex-end;
     }
